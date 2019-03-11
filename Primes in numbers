@@ -1,0 +1,19 @@
+def primeFactors(n):
+    result = ''
+    power = 0
+    counter = 2
+    while n != 1:
+        if n % counter == 0:
+            n /= counter
+            power += 1
+        else:
+            counter += 1
+            if power != 0:
+                if power == 1:
+                    result += f'({counter-1})'
+                else:
+                    result += f'({counter-1}**{power})'
+            power = 0
+    return result+f'({counter})' if power == 1 else   result + f'({counter}**{power})'
+
+print(primeFactors(7775460))
