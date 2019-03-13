@@ -14,6 +14,6 @@ def primeFactors(n):
                 else:
                     result += f'({counter-1}**{power})'
             power = 0
-    return result+f'({counter})' if power == 1 else   result + f'({counter}**{power})'
+    return result+f'({counter})' if power == 1 else  result + f'({counter}**{power})'
 
 print(primeFactors(7775460))
