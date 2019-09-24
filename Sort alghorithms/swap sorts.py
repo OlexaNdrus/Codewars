@@ -6,7 +6,7 @@ def silly_sort(array):
         for i in range(len(array)-1):
             if array[i]>array[i+1]:
                 array[i],array[i+1]=array[i+1],array[i]
-        if all(array[i]<=array[i+1] for i in range(len(array)-1)):
+        if array==sorted(array):
             return array
 
 def bubble_sort(array):
@@ -42,7 +42,7 @@ def even_odd_sort(array):
             if array[i]>array[i+1]:
                     array[i],array[i+1]=array[i+1],array[i]
         counter+=1
-        if all(array[i] <= array[i + 1] for i in range(len(array) - 1)):
+        if array==sorted(array):
             return array
 
 def comb_sort(array):
@@ -54,7 +54,7 @@ def comb_sort(array):
         step=(step*10//13)
     return array
 
-ln=1000
+ln=100
 array=[randint(0,1000) for i in range(ln)]
 
 print(sample(array,ln))
